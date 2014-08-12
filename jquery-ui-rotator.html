@@ -21,61 +21,136 @@
   <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/themes/cupertino/jquery-ui.css" rel="stylesheet">
   <link rel="stylesheet" href="jquery-ui-rotator.css">
 
+  <style>
+    /* custom CSS ids and classes */
+    #image-rotator { width: 405px; }
+
+    #content-rotator { width: 600px; }
+
+      #content-rotator .rotator-content {
+        margin: auto 50px auto 400px;
+      }
+
+      #content-rotator .rotator-content h1 {
+        margin: 10px 0 5px 0;
+      }
+
+      #content-rotator .rotator-content p {
+        margin: 0;
+      }
+
+    /* custom css using plugin hooks */
+    #content-rotator .ui-rotator {
+      background-color: #fff;
+      background-image: url("sprite.jpg");
+      background-repeat: no-repeat;
+      height: 165px;
+    }
+      #content-rotator .ui-rotator-1 {
+        background-position: 0 0;
+      }
+
+      #content-rotator .ui-rotator-2 {
+        background-position: 0 -166px;
+      }
+
+      #content-rotator .ui-rotator-3 {
+        background-position: 0 -332px;
+      }
+  </style>
+
 </head>
 
 <body>
 
   <header role="banner">
 
-    <h1>Rotator</h1>
+    <h1>jQuery UI Rotator</h1>
 
   </header>
   <!-- @banner -->
 
 
+  <!-- content -->
   <div role="main">
 
-    <!-- content -->
-    <div data-role="rotator" data-options='{"delay": 5000, "effect": "slide"}'>
-      <section>
-        <div class="rotator-content">
-          <h1>Transition Center</h1>
+    <p>jQuery UI Rotator is a jQuery UI widget that cycles through any number of ads, content or images.</p>
 
-          <p>Welcome to the new Fifth Third Direct! To find answers to questions you may have when using the system, please visit our Transition Center, we have many resources ranging from administrative to payment and reporting guides, to make your transition as simple as possible.</p>
+    <p>You can set any of the following options to customize it to fit your needs. The <code>effect</code>, <code>enter</code> and <code>exit</code> options align with the jQuery UI <a href="http://api.jqueryui.com/toggle/">toggle API</a>, and can be set accordingly:</p>
 
-          <button type="button">Transition Center</button>
-        </div>
-      </section>
+    <pre>
+<code>
+// default options
+$('selector').rotator({
+  auto: true,       // rotate automatically
+  effect: 'fade',   // slide or fade
+  delay: 5000,      // delay between rotations
+  selector: '> *',  // rotating containers/images, relative to selector used to initialize plugin
 
-      <section>
-        <div class="rotator-content">
-          <h1>Commercial Card</h1>
+  // options for rotator being displayed
+  enter: {
+    direction: 'right', // default for 'slide', not used by 'fade'
+    duration: 1000  // duration of the animation
+  },
 
-          <p>Greetings Commercial Card customers! Are you interested in improving overall card program management through the use of key account alerts and notifications?  Click Commercial Card Management (CCM) Alerts and Notifications User Guide to learn more about the types of alerts available and how to add them via the Fifth Third Direct Portal.</p>
+  // options for rotator being hidden
+  exit: {
+    direction: 'left', // default for 'slide', not used by 'fade'
+    duration: 1000  // duration of the animation
+  }
+});
+</code>
+</pre>
 
-          <button type="button">Transition Center</button>
-        </div>
-      </section>
+    <p>NOTE: Options can be set using the <code>data-options</code> attribute as well, and passing it an object. For example:</p>
+  <pre>
+<code>
+  &lt;div data-role="rotator" data-options='{ "auto": false, "effect": "slide" }'&gt;...&lt;/div&gt;
+</code>
+  </pre>
 
-      <section>
-        <div class="rotator-content">
-          <h1>Payments</h1>
+    <h2>Fade Animation (Default)</h2>
 
-          <p>Have questions about how to create wire or payroll payments, payments from templates or even how to transfer money between accounts on the new Fifth Third Direct?  Find the answers to your questions and more by visiting our Payments section within our Transition Center</p>
-
-          <button type="button">Transition Center</button>
-        </div>
-      </section>
-    </div><!-- rotator -->
-
-
-
-
-    <div data-role="rotator" style="width: 401px;">
+    <div id="image-rotator" data-role="rotator">
       <img src="img1.png">
       <img src="img2.png">
       <img src="img3.png">
     </div>
+
+
+    <h2>Slide Animation</h2>
+
+    <div id="content-rotator" data-role="rotator" data-options='{"delay": 5000, "effect": "slide"}'>
+      <section>
+        <div class="rotator-content">
+          <h1>Heading 1</h1>
+
+          <p>Some Content</p>
+
+          <button type="button">A Button</button>
+        </div>
+      </section>
+
+      <section>
+        <div class="rotator-content">
+          <h1>Heading 2</h1>
+
+          <p>Some Content</p>
+
+          <button type="button">A Button</button>
+        </div>
+      </section>
+
+      <section>
+        <div class="rotator-content">
+          <h1>Heading 1</h1>
+
+          <p>Some Content</p>
+
+          <button type="button">A Button</button>
+        </div>
+      </section>
+    </div><!-- rotator -->
 
   </div>
   <!-- @main -->
