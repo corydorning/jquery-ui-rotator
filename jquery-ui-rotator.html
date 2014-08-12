@@ -1,0 +1,117 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+
+  <!-- use chrome frame if installed -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Page Title | Site Title</title>
+  <meta name="description" content="Rotator">
+  <meta name="author" content="Cory Dorning">
+
+  <!-- Mobile viewport optimization -->
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <!-- stylesheets -->
+  <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/themes/cupertino/jquery-ui.css" rel="stylesheet">
+  <link rel="stylesheet" href="jquery-ui-rotator.css">
+
+</head>
+
+<body>
+
+  <header role="banner">
+
+    <h1>Rotator</h1>
+
+  </header>
+  <!-- @banner -->
+
+
+  <div role="main">
+
+    <!-- content -->
+    <div data-role="rotator" data-options='{"delay": 5000, "effect": "slide"}'>
+      <section>
+        <div class="rotator-content">
+          <h1>Transition Center</h1>
+
+          <p>Welcome to the new Fifth Third Direct! To find answers to questions you may have when using the system, please visit our Transition Center, we have many resources ranging from administrative to payment and reporting guides, to make your transition as simple as possible.</p>
+
+          <button type="button">Transition Center</button>
+        </div>
+      </section>
+
+      <section>
+        <div class="rotator-content">
+          <h1>Commercial Card</h1>
+
+          <p>Greetings Commercial Card customers! Are you interested in improving overall card program management through the use of key account alerts and notifications?  Click Commercial Card Management (CCM) Alerts and Notifications User Guide to learn more about the types of alerts available and how to add them via the Fifth Third Direct Portal.</p>
+
+          <button type="button">Transition Center</button>
+        </div>
+      </section>
+
+      <section>
+        <div class="rotator-content">
+          <h1>Payments</h1>
+
+          <p>Have questions about how to create wire or payroll payments, payments from templates or even how to transfer money between accounts on the new Fifth Third Direct?  Find the answers to your questions and more by visiting our Payments section within our Transition Center</p>
+
+          <button type="button">Transition Center</button>
+        </div>
+      </section>
+    </div><!-- rotator -->
+
+
+
+
+    <div data-role="rotator" style="width: 401px;">
+      <img src="img1.png">
+      <img src="img2.png">
+      <img src="img3.png">
+    </div>
+
+  </div>
+  <!-- @main -->
+
+
+  <footer role="contentinfo">
+
+    <!-- footer -->
+
+  </footer>
+  <!-- @contentinfo -->
+
+
+  <!-- JavaScript at the bottom for fast page loading -->
+
+  <!-- Libraries -->
+  <!-- jQuery(UI): Google CDN w/ protocol relative URL; fall back to local if offline -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="/boilerplate/master/js/vendor/jquery.min.js"><\/script>')</script>
+
+  <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/jquery-ui.min.js"></script>
+  <script>window.jQuery.ui || document.write('<script src="/boilerplate/master/js/vendor/jquery-ui.min.js"><\/script>')</script>
+
+  <!-- Site/App Scripts: concat and minify for prod -->
+  <script defer src="jquery.ui.rotator.js"></script>
+
+
+  <script>
+    $(function() {
+      $('[data-role="rotator"]').rotator();
+
+      // other jquery ui styles
+      $('button').button();
+    });
+  </script>
+  <!-- end scripts -->
+
+</body>
+</html>
