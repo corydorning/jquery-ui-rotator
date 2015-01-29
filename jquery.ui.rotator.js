@@ -1,6 +1,6 @@
 /*! jquery.ui.rotator.js
  *
- * URL: http://corydorning.com/projects/multimenu
+ * URL: http://corydorning.com/projects/rotator
  *
  * @author: Cory Dorning
  * @modified: 08/12/2014
@@ -11,7 +11,6 @@
  * any number of ads, content or images.
  *
  */
-
 
 ;(function($) {
   "use strict";
@@ -154,8 +153,9 @@
         delay = self.options.delay,
         $togglers = self.$toggler.children(),
 
-      // keep track of rotator
-        rotator = 0,
+      // keep track of rotator, start at second one
+      // since first one is displayed already
+        rotator = 1,
 
       // trigger next rotator
         nextRotator = function() {
@@ -182,7 +182,7 @@
           exit = self.options.exit,
           $rotators = self.$rotators,
           $prev = $rotators.filter(':visible');
-
+          
       // show current
       $rotator
         .stop(true, true)

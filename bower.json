@@ -1,0 +1,25 @@
+{
+  "name": "jquery-ui-rotator",
+  "main": ["jquery.ui.rotator.js"],
+  "version": "1.0.0",
+  "homepage": "https://github.com/corydorning/jquery-ui-rotator",
+  "authors": [
+    "Cory Dorning <cory@dorning.me>"
+  ],
+  "description": "rotator is a jQuery UI widget that cycles through any number of ads, content or images.",
+  "keywords": [
+    "jquery",
+    "jquery ui",
+    "rotator",
+    "slideshow",
+    "ads"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
