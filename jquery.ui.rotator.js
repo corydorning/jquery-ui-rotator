@@ -182,7 +182,7 @@
           exit = self.options.exit,
           $rotators = self.$rotators,
           $prev = $rotators.filter(':visible');
-          
+
       // show current
       $rotator
         .stop(true, true)
