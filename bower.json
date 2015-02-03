@@ -1,6 +1,6 @@
 {
   "name": "jquery-ui-rotator",
-  "main": ["jquery.ui.rotator.js"],
+  "main": ["jquery-ui-rotator.js", "jquery-ui-rotator.css"],
   "version": "1.0.0",
   "homepage": "https://github.com/corydorning/jquery-ui-rotator",
   "authors": [
