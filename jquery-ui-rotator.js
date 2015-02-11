@@ -38,22 +38,24 @@
 
     _create: function() {
       // create a unique namespace for events that the widget
-      // factory cannot unbind automatically.
-      this._namespaceID = this.eventNamespace;
+      // update options with html5 data
+      var self = this
+        ,
+          $el = self.element
+        ,
+          o = self.options
+        ,
+          data = $el.data('options') && $el.data('options').rotator || {}
+        ,
+          // get rotators
+          $rotators = self.$rotators = $el.find(o.selector).wrapAll('<div class="ui-rotator-content"/>').hide()
+        ,
+          // create a toggler
+          $toggler = self.$toggler = $('<ul/>').addClass('ui-rotator-toggler')
+      ;
 
       // set options via HTML5 data
-      $.extend(this.options, this.element.data('options'));
-
-      var self = this,
-        o = self.options,
-        $el = self.element,
-
-        // get rotators
-        $rotators = self.$rotators = $el.find(o.selector).wrapAll('<div class="ui-rotator-content"/>').hide(),
-
-        // create a toggler
-        $toggler = self.$toggler = $('<ul/>').addClass('ui-rotator-toggler');
-
+      $.extend(true, o, data);
 
       // loop through rotators
       $.each($rotators, function(i) {
