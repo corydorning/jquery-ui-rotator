@@ -1,4 +1,4 @@
-/*! jquery.ui.rotator.js
+/*! jquery-ui-rotator.js
  *
  * URL: http://corydorning.com/projects/rotator
  *
